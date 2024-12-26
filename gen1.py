@@ -1,29 +1,25 @@
-# create funcs
 def blank():
-    for i in range(100):
-        print()
+    pass  # Removed the for loop to avoid unnecessary output
 
-# define vars
+# Define variables
 num = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 pwd = ""
 smp = ["0", "0", "0", "0", "0"]
 
-# get pwd
-pwd = str(input("Enter pwd (only num, 5 char): "))
+# Get password from the user
+pwd = input("Enter pwd (only num, 5 char): ")
 
-# check pwd
-if len(pwd) != 5:
-    print("\n5 char only")
+# Validate password
+if len(pwd) != 5 or not pwd.isdigit():
+    print("\nInvalid input. Please enter exactly 5 numeric characters.")
     exit()
 
-# hack!
+# Brute force hack
 for i in range(5):
     for digit in num:
         smp[i] = digit
-        blank()
         print(smp)
         if smp[i] == pwd[i]:
             break
 
-print("The password was: ", end="")
-print("".join(smp))
+print("The password was:", "".join(smp))
