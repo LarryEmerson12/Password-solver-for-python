@@ -6,7 +6,7 @@ Ask this bot to hack your password instantly! Fork it, check it, and edit it!
 
 ### Gen 1 (released)
 
-Requires a **10 character password** only.
+Requires a **5 number password** only.
 
 **Quality:** Stable
 
